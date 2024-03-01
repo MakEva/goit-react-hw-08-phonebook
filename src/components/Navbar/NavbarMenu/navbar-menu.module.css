@@ -1,14 +1,15 @@
 .menu {
   list-style: none;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  text-align: left;
 }
 
 .link {
   padding: 10px 15px;
   text-decoration: none;
   color: #000;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
 

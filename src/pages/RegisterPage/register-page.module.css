@@ -1,4 +1,8 @@
 .title {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 80px;
+  font-size: 35px;
+  color: #131313;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
