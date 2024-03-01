@@ -1,16 +1,44 @@
-export const App = () => {
+// import css from './App.module.css';
+import { lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+
+import { current } from '../redux/auth/auth-operations';
+import SharedLayout from './SharedLayout/SharedLayout';
+
+import PrivateRoute from '../components/PrivateRoute/PrivateRoute';
+import PublicRoute from '../components/PublicRoute/PublicRoute';
+
+const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
+const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
+const Phonebook = lazy(() => import('./PhoneBook/Phonebook'));
+const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage'));
+const NotFoundPage = lazy(() => import('../pages/NotFoundPage/NotFoundPage'));
+
+const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(current());
+  }, [dispatch]);
+
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<HomePage />} />
+          <Route element={<PublicRoute />}>
+            <Route path="register" element={<RegisterPage />} />
+            <Route path="login" element={<LoginPage />} />
+          </Route>
+          <Route element={<PrivateRoute />}>
+            <Route path="phonebook" element={<Phonebook />} />
+          </Route>
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
     </div>
   );
 };
+export default App;
