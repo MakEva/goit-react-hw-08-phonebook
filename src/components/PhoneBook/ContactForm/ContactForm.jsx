@@ -2,6 +2,7 @@ import { nanoid } from 'nanoid';
 import css from './ContactForm.module.css';
 import { addContact } from '../../../redux/contacts/contacts-operations';
 import { useDispatch } from 'react-redux';
+import img from '../../image/phonebook.png';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -22,30 +23,35 @@ const ContactForm = () => {
   };
 
   return (
-    <form className={css.contact_form} onSubmit={handleSubmit} action="">
-      <label htmlFor={nameId} className={css.for_label}>
-        Name
-      </label>
-      <input
-        id={nameId}
-        className={css.for_input}
-        type="text"
-        name="name"
-        required
-      />
-      <label htmlFor={numberId} className={css.for_label}>
-        Number
-      </label>
-      <input
-        id={numberId}
-        className={css.for_input}
-        type="tel"
-        name="number"
-        required
-      />
-      <button className={css.button} type="submit">
-        Add contact
-      </button>
+    <form onSubmit={handleSubmit} action="" className={css.form_blok}>
+      <div className={css.contact_form}>
+        <label htmlFor={nameId} className={css.for_label}>
+          Name
+        </label>
+        <input
+          id={nameId}
+          className={css.for_input}
+          type="text"
+          name="name"
+          required
+        />
+        <label htmlFor={numberId} className={css.for_label}>
+          Number
+        </label>
+        <input
+          id={numberId}
+          className={css.for_input}
+          type="tel"
+          name="number"
+          required
+        />
+        <button className={css.btn} type="submit">
+          Add contact
+        </button>
+      </div>
+      <div className={css.img_block}>
+        <img src={img} alt="React icon" className={css.img}></img>
+      </div>
     </form>
   );
 };

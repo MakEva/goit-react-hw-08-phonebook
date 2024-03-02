@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 500px;
-  border: 2px solid black;
+  width: 250px;
   padding: 10px;
 }
 .for_label {
@@ -17,9 +16,30 @@
   width: 200px;
   border: 1px solid #000;
 }
-.button {
+.btn {
+  background: lightgrey;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  width: 100px;
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  padding: 6px 12px;
+  text-transform: uppercase;
+  color: #161515;
+  font-weight: bold;
+  text-shadow: 1px 0px 1px #92949a;
+  letter-spacing: 1px;
+  font-size: 12px;
+  width: 200px;
+}
+.btn:hover {
+  background-color: #585757;
+}
+.img {
+  width: 150px;
+}
+.form_blok {
+  display: flex;
+}
+.img_block {
+  margin-left: 80px;
 }

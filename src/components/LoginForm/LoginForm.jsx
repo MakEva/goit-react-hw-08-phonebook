@@ -59,7 +59,9 @@ const LoginForm = ({ onSubmit }) => {
           required
         />
       </div>
-      <button type="submit">Login</button>
+      <button className={css.btn} type="submit">
+        Login
+      </button>
     </form>
   );
 };

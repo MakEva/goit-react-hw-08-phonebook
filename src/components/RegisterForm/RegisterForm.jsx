@@ -71,7 +71,9 @@ const RegisterForm = ({ onSubmit }) => {
           required
         />
       </div>
-      <button type="submit">Register</button>
+      <button className={css.btn} type="submit">
+        Register
+      </button>
     </form>
   );
 };

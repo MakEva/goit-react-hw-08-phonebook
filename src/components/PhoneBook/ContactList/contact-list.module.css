@@ -1,10 +1,20 @@
 .deleteBtn {
+  background: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  margin-left: 20px;
-  background-color: gray;
+  /* margin-top: 20px; */
+  padding: 6px 12px;
+  text-transform: uppercase;
+  color: #161515;
+  font-weight: bold;
+  text-shadow: 1px 0px 1px #92949a;
+  letter-spacing: 1px;
+  font-size: 12px;
+  width: 100px;
 }
 .deleteBtn:hover {
-  background-color: blue;
+  background-color: red;
 }
 .list {
   background-color: #e0e0e0;

@@ -14,18 +14,18 @@
 
 .btn {
   background: lightgrey;
-  box-shadow: 5px 3px 6px #c4c8d8;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 20px;
   padding: 6px 12px;
   text-transform: uppercase;
-  color: #585757;
+  color: #161515;
   font-weight: bold;
   text-shadow: 1px 0px 1px #92949a;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-size: 12px;
+  width: 100px;
 }
 .btn:hover {
   background-color: #585757;

@@ -9,10 +9,10 @@
 .link:hover {
   border-bottom: 1px solid;
 }
-
 .link:global(.active) {
-  font-weight: bold;
+  color: red;
 }
+
 .nav_auth {
   display: flex;
   align-items: center;
